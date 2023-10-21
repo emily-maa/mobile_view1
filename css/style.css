@@ -9,16 +9,17 @@ body{
     color: black;
 }
 h1{
-    font-size: 3em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    text-align: center;
+    font-size: 2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 20px;
 }
 h2{
     font-size: 2em;
     font-family: 'Courier New', Courier, monospace;
     color: darkgreen;
     text-align: center;
+    margin: 20px;
 }
 h3{
     font-size: 2em;
@@ -101,7 +102,14 @@ span{
     padding: 5px;
     margin: 20px;
     border-radius: 30px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
+/* figure{
+    animation-name: example;
+    animation-duration: 4s;
+} */
 .food_images img:nth-child(3){
     grid-column: span 2;
     width: 300px;
@@ -111,9 +119,24 @@ span{
     img[src$=".gif"] {
         display: none;
     }
+    .food_images img,.pet_images img,figure img,video{
+        animation: none;
+    }
 }
-@media screen and (min-width: 680px) {
+
+@keyframes example {
+    from {
+        background-color: #DAF7A6;
+    }
+
+    to {
+        background-color: forestgreen;
+    }
+}
+/* @media screen and (min-width: 680px) {
     * {
         background-color: yellow;
     }
-}
+} */
+
+
